@@ -1,0 +1,301 @@
+.sec_dialog .input-field {
+  padding: 0px 10px;
+  color: #666;
+  border: 1px solid #dee2e6;
+  background-color: #fff;
+  -webkit-transition: border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  height: 40px;
+  line-height: 40px;
+  min-width: 60%;
+}
+
+.sec_dialog .input-field:focus {
+  color: #666;
+  border-color: #00a0d2;
+  outline: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 9px rgba(50, 50, 9, 0),
+    3px 4px 8px rgba(94, 114, 228, 0.1);
+  box-shadow: 0 3px 9px rgba(50, 50, 9, 0), 3px 4px 8px rgba(94, 114, 228, 0.1);
+}
+.sec_dialog .button:hover,
+.sec_dialog .button:focus {
+  color: #fff;
+  border-color: #0073aa;
+  background-color: #0073aa;
+}
+.sec_dialog .button-primary,
+.wrapper .button-primary {
+  color: #fff;
+  border-color: #0073aa;
+  background-color: #0073aa;
+}
+.sec_dialog .button-primary:hover,
+.sec_dialog .button-primary:focus {
+  color: #fff;
+  border-color: #00a0d2;
+  background-color: #00a0d2;
+}
+.sec_dialog .button-danger:hover,
+.sec_dialog .button-danger:focus {
+  color: #fff;
+  border-color: #dc3232;
+  background-color: #dc3232;
+}
+
+/*Modal*/
+.animate {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+
+@-webkit-keyframes fadeOutDownBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+
+.sec_dialog {
+  position: fixed;
+  z-index: 1050;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+.close_dialog {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+  float: right;
+  opacity: 0.5;
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: none;
+  border: 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+  margin: -1.25rem -1.25rem -1.25rem auto;
+  padding: 1.25rem;
+  cursor: pointer;
+}
+.sec_dialog .modal-dialog {
+  height: calc(100vh - (1.75rem * 2));
+}
+.sec_dialog .modal-content {
+  position: absolute;
+  left: calc(50% - 250px);
+  top: 100px;
+  width: 100%;
+  max-width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  pointer-events: auto;
+  border: 0 solid rgba(0, 0, 0, 0.2);
+  outline: 0;
+  background-color: #fff;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 15px 35px rgba(50, 50, 93, 0.2),
+    0 5px 15px rgba(0, 0, 0, 0.17);
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.17);
+}
+#form-configurations.sec_dialog .modal-content {
+  left: calc(200px);
+  top: 50px;
+  width: 100%;
+  max-width: calc(100% - 240px);
+}
+.sec_dialog .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.25rem;
+  border-bottom: 0 solid #e9ecef;
+  border-top-left-radius: 0.4375rem;
+  border-top-right-radius: 0.4375rem;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.sec_dialog .modal-header h5 {
+  margin: 0;
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.sec_dialog .modal-body {
+  position: relative;
+  padding: 1.5rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-size: 14px;
+  font-weight: 300;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  max-height: 600px;
+  overflow-y: scroll;
+}
+.sec_dialog .modal-body > div:not(:last-child) {
+  margin-bottom: 5px;
+}
+.sec_dialog .modal-body > div:empty {
+  margin-bottom: 0;
+}
+.sec_dialog .modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.5rem;
+  border-top: 0 solid #e9ecef;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.sec_dialog .modal-body div.form-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.sec_dialog .modal-footer .button {
+  margin-left: 10px;
+  height: 40px;
+  line-height: 40px;
+  min-width: 100px;
+}
+.sec_dialog .row,
+.sec_dialog .control,
+.sec_dialog .control-label {
+  width: 100%;
+}
+.sec_dialog input[type="text"],
+.sec_dialog textarea,
+.sec_dialog select {
+  width: 100%;
+  margin: 5px 0;
+}
+.sec_dialog select {
+  padding: 0 !important;
+}
+.sec_dialog select option {
+  padding: 5px 10px;
+}
+.sec_dialog .modal-body > div.content-heading,
+.sec_dialog .modal-body > div.child-rows {
+  margin-bottom: 15px;
+}
+
+.sec_dialog .payment-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.sec_dialog .payment-status label {
+  margin-right: 10px;
+}
+.sec_dialog .payment-status select {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
